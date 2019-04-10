@@ -1,0 +1,82 @@
+<html>
+<head>
+<link href="css\style2.css" rel="stylesheet">
+<link href="css\style1.css" rel="stylesheet">
+</head>
+<body background="(64).jpg">
+<div id="main">
+<center>
+<div id="top"><b><marquee>ONLINE TAXI</marquee></b></div>
+<div id="menu"><center><a href="chome.html">HOME &nbsp&nbsp </a><a href="Cpassword.html">CHANGE PASSWORD &nbsp&nbsp</a><a href="logout.html">LOGOUT &nbsp&nbsp</a></center></div>
+<br>
+<br>
+<br>
+<div class="slidercontainer">  
+        <div class="showSlide fade">  
+            <img src="images\1.jpg" />  
+            <div class="content"></div>  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="images\2.jpg" />  
+            <div class="content"></div>  
+        </div>  
+  
+        <div class="showSlide fade">  
+            <img src="images\3.jpg" />  
+            <div class="content"></div>  
+        </div>  
+        <div class="showSlide fade">  
+            <img src="images\4.jpg" />  
+            <div class="content"></div>  
+        </div>  
+        <!-- Navigation arrows -->  
+        <a class="left" onclick="nextSlide(-1)"></a>  
+        <a class="right" onclick="nextSlide(1)"></a>  
+    </div>  
+</center>
+</div>
+
+<div class="footer">
+
+<center>
+<a href="http://www.facebook.com" target="_blank">
+<img src="facebook.png" alt="facebook"/>
+</a>
+<a href="http://twitter.com" target="_blank">
+<img src="twitter.png" alt="twitter"/>
+</a>
+<a href="http://www.linkedin.com"  target="_blank">
+<img src="linkedin.png" alt="linkedin"/>
+</a>
+<a href="http://plus.google.com" target="_blank">
+<img src="google.png" alt="Google"/>
+</a>
+</center>
+</div>
+
+<script type="text/javascript">  
+        var slide_index = 1;  
+        displaySlides(slide_index);  
+  
+        function nextSlide(n) {  
+            displaySlides(slide_index += n);  
+        }  
+  
+        function currentSlide(n) {  
+            displaySlides(slide_index = n);  
+        }  
+  
+        function displaySlides(n) {  
+            var i;  
+            var slides = document.getElementsByClassName("showSlide");  
+            if (n > slides.length) { slide_index = 1 }  
+            if (n < 1) { slide_index = slides.length }  
+            for (i = 0; i < slides.length; i++) {  
+                slides[i].style.display = "none";  
+            }  
+            slides[slide_index - 1].style.display = "block";  
+        }  
+    </script>  
+  
+</body>
+</html>
