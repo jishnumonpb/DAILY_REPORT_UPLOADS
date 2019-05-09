@@ -112,10 +112,10 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                <a href="#"><br><br>
+                    <img src="images/icon/logo2.jpg" alt="Cool Admin" />
                 </a>
-            </div>
+            </div><br>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
@@ -123,33 +123,7 @@
                         <li>
                             <a href="adminhome1.php">
                                 <i class="fas fa-chart-bar"></i>HOME</a>
-                        </li>
-                        <li class="active">
-                            <a href="addvehicle.php">
-                                <i class="fas fa-table"></i>ADD VEHICLES</a>
-                        </li>
-                        <li>
-                            <a href="viewVehicle.php">
-                                <i class="far fa-check-square"></i>VIEW VEHICLES</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-calendar-alt"></i>CONFIRM</a>
-                        </li>
-                        <li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>CUSTOMERS</a>
-                        </li>
-						<li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>SALE</a>
-                        </li>
-						<li>
-                            <a href="map.html">
-                                <i class="fas fa-map-marker-alt"></i>PROFILE</a>
-                        </li>
-                        
-                        
+                       
                         
                     </ul>
                 </nav>
@@ -363,11 +337,11 @@
                                         <tbody>
 										<?php
 										require "connect.php";
-										$qury="select * from`registration";
+										$qury="select * from ureg";
 			                            $obj=mysqli_query($conn,$qury);
 										while($row = mysqli_fetch_array($obj)) {              
 												echo  "<tr>
-													 <td><a href=viewcustomer.php?id=".$row['user_id'].">".$row['user_id']."</a></td> 
+													 <td><a href=viewcustomer.php?id=".$row['uid'].">".$row['uid']."</a></td> 
 													<td>".$row['fname']."</td>
 													
 													<td>".$row['mname']."</td>
@@ -377,7 +351,7 @@
 													<td>".$row['phone']."</td>
 													<td>".$row['email']."</td>
 													
-													<td><a href=deleteVehicle.php?id=".$row['user_id']." class='btn btn-danger btn-sm'>Delete</a></td>
+													<td><a href=deleteVehicle.php?id=".$row['uid']." class='btn btn-danger btn-sm'>Delete</a></td>
 												</tr>";
 											}
 										?>
@@ -392,7 +366,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright">
-                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                                    <p>Copyright © AUTOSHOP 2019  All rights reserved. .</p>
                                 </div>
                             </div>
                         </div>

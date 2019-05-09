@@ -6,7 +6,7 @@
 		$mname=$_POST["mname"];
 		$lname=$_POST["lname"];
 		$address=$_POST["address"];
-		$dob=$_POST["date"];
+		$dob=$_POST["dob"];
 		$phone=$_POST["phone"];
 		$email=$_POST["email"];
 	//	$uname=$_POST["uname"];
@@ -14,12 +14,12 @@
 		$cpassword=$_POST["cpassword"];
 		if($password==$cpassword)
 		{
-		echo	$qury="INSERT INTO `ureg`(`fname`,`mname`,`lname`,`address`,`dob`,`phone`,`email`,`password`) VALUES ('$fname','$mname','$lname','$address','$dob','$phone','$email','$password')";
+		echo	$qury="INSERT INTO `ureg`(`fname`,`mname`,`lname`,`address`,`dob`,`phone`,`email`,`password`) VALUES ('$fname','$mname','$lname','$address','$dob','$phone','$email','".md5($password)."')";
 			$obj=mysqli_query($conn,$qury);
 
 $id=mysqli_insert_id($conn);
  echo $qury1 = "INSERT INTO login_autoshop1 (lid, email, password,rol,status)
-  	       	VALUES ($id, '$email', '".md5($password)."','user',0)";
+  	       	VALUES ($id,'$email', '".md5($password)."','user',0)";
 
  echo 	  $obj1 = mysqli_query($conn, $qury1);
 		}
@@ -66,12 +66,12 @@ $id=mysqli_insert_id($conn);
 <label>Address:</label><br>
 <textarea placeholder="Address" name="address" required></textarea><br>
 <label>Date of Birth:</label><br>
-<input id="dob" name="date"  placeholder="Date of Birth" type="date" required><br>
+<input id="dob" name="dob"  placeholder="Date of Birth" type="date" required><br>
 <label>Contct Number:</label>
 <input id="phone" name="phone"  placeholder="Phone Number" type="phone" required><br>
 <script src="mobval.js"></script><br>
 <label>E-mail:</label>
-<input id="email" name="email"  placeholder="Email id" type="email" required><br>
+<input id="email" name="email"  placeholder="Email-id is your user Name" type="email" required><br>
 <script src="email.js"></script><br>
 
 <label>Password :</label>

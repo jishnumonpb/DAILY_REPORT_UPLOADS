@@ -63,7 +63,7 @@ if(!isset($_SESSION['lid'])){
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="adminhome1.php">
                                 <i class="fas fa-tachometer-alt"></i>HOME</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
@@ -135,7 +135,7 @@ if(!isset($_SESSION['lid'])){
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="adminhome1.php">
                                 <i class="fas fa-tachometer-alt"></i>HOME</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
@@ -165,15 +165,19 @@ if(!isset($_SESSION['lid'])){
                                 <i class="far fa-check-square"></i>VIEW CUSTOMER</a>
                         </li>
 						
-                        <li>
+                        <!-- <li>
                             <a href="confirmation_mail.php">
                                 <i class="fas fa-table"></i>CONFIRM</a>
-                        </li>
+                        </li> -->
                         
                         <li>
-                            <a href="varify_user.php">
-                                <i class="fas fa-calendar-alt"></i>VARIFY USER</a>
+                            <a href="adminview.php">
+                                <i class="fas fa-calendar-alt"></i>VIEW AUCTION </a>
                         </li>
+                        <!-- <li>
+                            <a href="view_message1.php">
+                                <i class="fas fa-calendar-alt"></i>USER NOTIFICATIONS </a>
+                        </li> -->
                         <li>
                             <a href="admin_profile.php">
                                 <i class="fas fa-map-marker-alt"></i>EDIT PROFILE</a>
@@ -328,7 +332,7 @@ if(!isset($_SESSION['lid'])){
                                             <img src="images/icon/avatar-01.jpg" alt="LOGOUT" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="logout.php">LOGOUT</a>
+                                            <a class="js-acc-btn" href="logout.php"><b>LOGOUT</b></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
@@ -379,7 +383,17 @@ if(!isset($_SESSION['lid'])){
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">ADMIN HOME</h2>
+                                <?php
+                                   require "connect.php";
+                                   $li=($_SESSION['lid']);
+                                   $sql="select fname from `ureg` where `uid`='$li'";
+                                   $rslt=mysqli_query($conn,$sql);
+                                   $row=mysqli_fetch_array($rslt);
+                                 ?>                
+                                   <h2 class="title-1"><marquee><b>WELCOME</b></marquee> </h2><br>
+                                    <h2 class="title-1"><?php echo $row['fname'];?></h2>
+                                  
+                                    <!-- <h2 class="title-1">ADMIN HOME</h2> -->
                                     
                                 </div>
                             </div>
@@ -597,7 +611,7 @@ if(!isset($_SESSION['lid'])){
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright">
-                                    <p>Autoshop © 2019 . 
+                                    <p>Copyright © 2019 AUTOSHOP. All rights reserved. </p>
                                 </div>
                             </div>
                         </div>
@@ -611,7 +625,7 @@ if(!isset($_SESSION['lid'])){
     </div>
 
     <!-- Jquery JS-->
-    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script src="vendor/jquery-3.2.1.min.js"></script>1
     <!-- Bootstrap JS-->
     <script src="vendor/bootstrap-4.1/popper.min.js"></script>
     <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>

@@ -43,7 +43,7 @@
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
-                            <img src="images/icon/logo.png" alt="CoolAdmin" />
+                            <img src="images/icon/logo2.jpg" alt="CoolAdmin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -110,12 +110,12 @@
         <!-- END HEADER MOBILE-->
 
         <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar d-none d-lg-block">
+        <aside class="menu-sidebar d-none d-lg-block"><br>
             <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                <a href="#"><br><br><br>
+                    <img src="images/icon/logo2.jpg" alt="Cool Admin" /><br><br>
                 </a>
-            </div>
+            </div><br><br>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
@@ -352,7 +352,7 @@
 										while($row = mysqli_fetch_array($obj)) {              
 												echo  "<tr>
 													<td><a href=viewVehicle.php?id=".$row['vid'].">".$row['vehicle']."</a></td>
-													<td>".$row['basic_price']."</td>
+													<td>".$row['brate']."</td>
 													<td><img src='".$row['image']."'></td>
 													<td>".$row['description']."</td>
 													<td>".$row['model']."</td>
@@ -379,7 +379,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright">
-                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                                    <p>Copyright © 2019 AUTOSHOP. All rights reserved. </p>
                                 </div>
                             </div>
                         </div>

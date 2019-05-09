@@ -40,9 +40,9 @@
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
             <div class="header-mobile__bar">
-                <div class="container-fluid">
+                <div class="container-fluid"><br><br>
                     <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
+                        <a class="logo" href="index.html"><br><br>
                             <img src="images/icon/logo.png" alt="CoolAdmin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
@@ -111,11 +111,11 @@
 
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
-            <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+            <div class="logo"><br><br>
+                <a href="#"><br><br><br>
+                    <img src="images/icon/logo2.jpg" alt="Cool Admin" />
                 </a>
-            </div>
+            </div><br>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
@@ -140,7 +140,7 @@
                     <div class="container-fluid">
                         <div class="header-wrap">
                             <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
+                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for vehicles  " />
                                 <button class="au-btn--submit" type="submit">
                                     <i class="zmdi zmdi-search"></i>
                                 </button>
@@ -341,13 +341,13 @@
                                         <tbody>
 										<?php
 										require "connect.php";
-										$qury="select * from`addvehicle";
+										$qury="select * from `addvehicle` where l_date > CURDATE()";
 			                            $obj=mysqli_query($conn,$qury);
 										while($row = mysqli_fetch_array($obj)) {              
 												echo  "<tr>
 													<td><a href=viewVehicle1.php?id=".$row['vid'].">".$row['vehicle']."</a></td>
-													<td>".$row['basic_price']."</td>
-													<td><img src='".$row['image']."'></td>
+													<td>".$row['brate']."</td>
+													<td><img style='width:200px' src='".$row['image']."'></td>
 													<td>".$row['description']."</td>
 													<td>".$row['model']."</td>
 													<td>".$row['color']."</td>
@@ -371,7 +371,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright">
-                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                                    <p>Copyright © 2019 AUTOSHOP. All rights reserved. </p>
                                 </div>
                             </div>
                         </div>

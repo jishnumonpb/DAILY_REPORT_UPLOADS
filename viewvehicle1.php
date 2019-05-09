@@ -43,7 +43,7 @@
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
-                            <img src="images/icon/logo.png" alt="CoolAdmin" />
+                            <img src="images/icon/logo2.png" alt="CoolAdmin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -73,10 +73,10 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
-                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                <a href="#"><br><br>
+                    <img src="images/icon/logo2.jpg" alt="Cool Admin" />
                 </a>
-            </div>
+            </div><br>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
@@ -303,7 +303,7 @@
 										$qury="select * from addvehicle where vid=".$_GET['id'];
 			                            $obj=mysqli_query($conn,$qury);
 										while($row = mysqli_fetch_array($obj)) {              
-												echo  "<div style='margin: 0px 100px; padding: 30px 50px; background:#fff'>Name:- ".$row['vehicle']."<br>","BPrice :- ".$row['basic_price']."<br><img style='width:300px;max-height:300px;' src='".$row['image']."'><br>","Description:- ".$row['description']."<br>","Model:- ".$row['model']."<br>","Color:- ".$row['color']."<br>","Fuel:- ".$row['fuel']."<br>","Registred:- ".$row['registred']."<br>","Year:- ".$row['year']."<br>","Milage:- ".$row['milage']."<br>","Transmission:- ".$row['transmission']."<br>","Add Date:- ".$row['add_date']."<br>","Basic Price:- ".$row['bp']."<br>","Last Date:- ".$row['l_date']."<br>","Bid Rate:- ".$row['brate'];
+												echo  "<div style='margin: 0px 100px; padding: 30px 50px; background:#fff'>Name:- ".$row['vehicle']."<br>","<br><img style='width:300px;max-height:300px;' src='".$row['image']."'><br>","Description:- ".$row['description']."<br>","Model:- ".$row['model']."<br>","Color:- ".$row['color']."<br>","Fuel:- ".$row['fuel']."<br>","Registred:- ".$row['registred']."<br>","Year:- ".$row['year']."<br>","Milage:- ".$row['milage']."<br>","Transmission:- ".$row['transmission']."<br>","Add Date:- ".$row['add_date']."<br>","Last Date:- ".$row['l_date']."<br>","Bid Rate:- ".$row['brate'];
                                             echo "<br><button class='btn btn-primary' onClick=location.href='auction_user.php?id=".$_GET['id']."'>Bid Now</button></div>";
                                         }
 									
@@ -318,7 +318,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright">
-                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                                    <p>Copyright © 2019 AUTOSHOP. </p>
                                 </div>
                             </div>
                         </div>

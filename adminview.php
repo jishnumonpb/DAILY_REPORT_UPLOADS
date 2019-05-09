@@ -1,10 +1,6 @@
-<?php
-session_start();
-//$id=$_SESSION['lid'];	
-$id=$_GET['id'];
-?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
@@ -44,10 +40,10 @@ $id=$_GET['id'];
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
             <div class="header-mobile__bar">
-                <div class="container-fluid">
+                <div class="container-fluid"><br><br>
                     <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
-                            <img src="images/icon/logo2.jpg" alt="CoolAdmin" />
+                        <a class="logo" href="index.html"><br><br>
+                            <img src="images/icon/logo.png" alt="CoolAdmin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -83,7 +79,7 @@ $id=$_GET['id'];
                                 <i class="fas fa-chart-bar"></i>REGISTER</a>
                         </li>
                         <li>
-                            <a href="table.html">
+                            <a href="table2.html">
                                 <i class="fas fa-table"></i>VIEW VEHICLES</a>
                         </li>
                         <li>
@@ -106,45 +102,7 @@ $id=$_GET['id'];
                                 </li>
                             </ul>
                         </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-desktop"></i>UI Elements</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="button.html">Button</a>
-                                </li>
-                                <li>
-                                    <a href="badge.html">Badges</a>
-                                </li>
-                                <li>
-                                    <a href="tab.html">Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="card.html">Cards</a>
-                                </li>
-                                <li>
-                                    <a href="alert.html">Alerts</a>
-                                </li>
-                                <li>
-                                    <a href="progress-bar.html">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a href="modal.html">Modals</a>
-                                </li>
-                                <li>
-                                    <a href="switch.html">Switchs</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grids</a>
-                                </li>
-                                <li>
-                                    <a href="fontawesome.html">Fontawesome Icon</a>
-                                </li>
-                                <li>
-                                    <a href="typo.html">Typography</a>
-                                </li>
-                            </ul>
-                        </li>
+                       
                     </ul>
                 </div>
             </nav>
@@ -153,8 +111,8 @@ $id=$_GET['id'];
 
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
-            <div class="logo">
-                <a href="#"><br><br>
+            <div class="logo"><br><br>
+                <a href="#"><br><br><br>
                     <img src="images/icon/logo2.jpg" alt="Cool Admin" />
                 </a>
             </div><br>
@@ -165,7 +123,8 @@ $id=$_GET['id'];
                         <li>
                             <a href="adminhome1.php">
                                 <i class="fas fa-chart-bar"></i>HOME</a>
-                        
+                        </li>
+                       
                         
                     </ul>
                 </nav>
@@ -305,13 +264,13 @@ $id=$_GET['id'];
                                             <img src="images/icon/avatar-01.jpg" alt="LOGOUT" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
+                                            <a class="js-acc-btn" href="logout.php">LOGOUT</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="images/icon/avatar-01.jpg" alt="LOGOUT" />
+                                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
                                                     </a>
                                                 </div>
                                                 <div class="content">
@@ -367,6 +326,7 @@ $id=$_GET['id'];
                                             <tr>
                                                 <th>vehicle</th>
                                                 <th>BPrice</th>
+                                                <th>Image</th>
                                                 <th>Description</th>
                                                 <th>Model</th>
 												<th>Color</th>
@@ -375,38 +335,36 @@ $id=$_GET['id'];
 												<th>Year</th>
 												<th>Milage</th>
 												<th>Transmission</th>
-												<th>Update</th>
+												
                                             </tr>
                                         </thead>
                                         <tbody>
 										<?php
 										require "connect.php";
-										  $qury="SELECT *FROM `addvehicle` WHERE vid = '$id'";
+                                        $qury="select * from `addvehicle` where CURDATE() > l_date";
+                                        $qury;
 			                            $obj=mysqli_query($conn,$qury);
 										while($row = mysqli_fetch_array($obj)) {              
 												echo  "<tr>
-												<form action='updateVehicle.php' method='post'	>
-													<td><input type='text' name='vid' value=".$row['vid']." hidden></td>
-													<td><input type='text' name='brate' value=".$row['brate']."></td>
-													<td><input type='text' name='desc' value=".$row['description']."></td>
-													<td><input type='text' name='model' value=".$row['model']."></td>
-													<td><input type='text' name='color' value=".$row['color']."></td>
-													<td><input type='text' name='fuel' value=".$row['fuel']."></td>
-													<td><input type='text' name='reg' value=".$row['registred']."></td>
-													<td><input type='text' name='year' value=".$row['year']."></td>
-													<td><input type='text' name='milage' value=".$row['milage']."></td>
-													<td><input type='text' name='trans' value=".$row['transmission']."></td>
-													<td><input type='submit' value='update'name='submit'></td>";
-											
-												echo "</form>";
-												echo "</tr>";
+													<td><a href=viewvehicle3.php?id=".$row['vid'].">".$row['vehicle']."</a></td>
+													<td>".$row['brate']."</td>
+													<td><img src='".$row['image']."'></td>
+													<td>".$row['description']."</td>
+													<td>".$row['model']."</td>
+													<td>".$row['color']."</td>
+													<td>".$row['fuel']."</td>
+													<td>".$row['registred']."</td>
+													<td>".$row['year']."</td>
+													<td>".$row['milage']."</td>
+													<td>".$row['transmission']."</td>
+													
+												</tr>";
 											}
 										?>
 										
                                             
                                         </tbody>
                                     </table>
-								
                                 </div>
                                 <!-- END DATA TABLE-->
                             </div>

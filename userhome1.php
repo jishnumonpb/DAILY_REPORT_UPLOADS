@@ -1,4 +1,11 @@
+
 <!DOCTYPE html>
+<?php
+session_start();
+if(!isset($_SESSION['lid'])){
+	header("location: http://localhost:8080/autoshoppp/");	
+}
+?>
 <html lang="en">
 
 <head>
@@ -57,7 +64,7 @@
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="userhome1.php">
                                 <i class="fas fa-tachometer-alt"></i>HOME</a>
                             <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                                 <li>
@@ -82,6 +89,11 @@
 						    
                             <a href="table.html">
                                 <i class="fas fa-table"></i>VIEW VEHICLES</a>
+                        </li>
+                        <li>
+						    
+                            <a href="./autoshopPayment/user/viewbookings1.php">
+                                <i class="fas fa-table"></i>ViEW REPORT</a>
                         </li>
                         <li>
                             <a href="form.html">
@@ -159,7 +171,7 @@
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="active has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="userhome1.php">
                                 <i class="fas fa-tachometer-alt"></i>HOME</a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
@@ -182,8 +194,20 @@
                                 <i class="fas fa-table"></i>VIEW VEHICLES</a>
                         </li>
                         <li>
+                            <a href="view_message.php">
+                                <i class="fas fa-table"></i>NOTIFICATIONS</a>
+                        </li>
+                        <li>
+                            <a href="./autoshopPayment/user/viewbookings1.php">
+                                <i class="fas fa-table"></i>VIEW REPORT</a>
+                        </li>
+                        <li>
                             <a href="user_profile1.php">
                                 <i class="far fa-check-square"></i>MY PROFILE</a>
+                        </li>
+                        <li>
+                            <a href="admin/profile-about1.php">
+                                <i class="far fa-check-square"></i>OWNER DETAILS</a>
                         </li>
                         
                         
@@ -209,7 +233,7 @@
                             <div class="header-button">
                                 <div class="noti-wrap">
                                     <div class="noti__item js-item-menu">
-                                        <i class="zmdi zmdi-comment-more"></i>
+                                        <i class="zmdi zmdi-comment-more" ></i>
                                         <span class="quantity">1</span>
                                         <div class="mess-dropdown js-dropdown">
                                             <div class="mess__title">
@@ -236,7 +260,7 @@
                                                 </div>
                                             </div>
                                             <div class="mess__footer">
-                                                <a href="#">View all messages</a>
+                                                <a href="view_message.php">View all messages</a>
                                             </div>
                                         </div>
                                     </div>
@@ -275,7 +299,7 @@
                                                 </div>
                                             </div>
                                             <div class="email__footer">
-                                                <a href="#">See all emails</a>
+                                                <a href="https://accounts.google.com/ServiceLogin/signinchooser?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">See all emails</a>
                                             </div>
                                         </div>
                                     </div>
@@ -314,7 +338,7 @@
                                                 </div>
                                             </div>
                                             <div class="notifi__footer">
-                                                <a href="#">All notifications</a>
+                                                <a href="view_message.php">All notifications</a>
                                             </div>
                                         </div>
                                     </div>
@@ -325,7 +349,7 @@
                                             <img src="images/icon/avatar-01.jpg" alt="" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="logout.php">LOGOUT</a>
+                                            <a class="js-acc-btn" href="logout.php"><b>LOGOUT</b></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
@@ -376,7 +400,15 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="overview-wrap">
-                                    <h2 class="title-1">USER HOME</h2>
+                <?php
+                require "connect.php";
+                $li=($_SESSION['lid']);
+                $sql="select fname,mname,lname from `ureg` where `uid`='$li'";
+                $rslt=mysqli_query($conn,$sql);
+                $row=mysqli_fetch_array($rslt);
+                ?>                
+                <h2 class="title-1"><b><marquee>WELCOME</marquee></b> </h2><br>
+                                    <h2 class="title-1"><?php echo $row['fname'];?>&nbsp<?php echo $row['mname'];?>&nbsp<?php echo $row['lname'];?></h2>
                                     
                                 </div>
                             </div>

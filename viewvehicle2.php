@@ -1,10 +1,6 @@
-<?php
-session_start();
-//$id=$_SESSION['lid'];	
-$id=$_GET['id'];
-?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
@@ -47,7 +43,7 @@ $id=$_GET['id'];
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
-                            <img src="images/icon/logo2.jpg" alt="CoolAdmin" />
+                            <img src="images/icon/logo2.png" alt="CoolAdmin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -61,90 +57,13 @@ $id=$_GET['id'];
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="has-sub">
-                            <a class="js-arrow" href="#">
+                            <a class="js-arrow" href="userhome1.php">
                                 <i class="fas fa-tachometer-alt"></i>HOME</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="index.html">Dashboard 1</a>
-                                </li>
-                                <li>
-                                    <a href="index2.html">Dashboard 2</a>
-                                </li>
-                                <li>
-                                    <a href="index3.html">Dashboard 3</a>
-                                </li>
-                                <li>
-                                    <a href="index4.html">Dashboard 4</a>
-                                </li>
-                            </ul>
+                            
                         </li>
-                        <li>
-                            <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>REGISTER</a>
-                        </li>
-                        <li>
-                            <a href="table.html">
-                                <i class="fas fa-table"></i>VIEW VEHICLES</a>
-                        </li>
-                        <li>
-                            <a href="form.html">
-                                <i class="far fa-check-square"></i>MY PROFILE</a>
-                        </li>
-                       
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-copy"></i>Pages</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="login.html">Login</a>
-                                </li>
-                                <li>
-                                    <a href="register.html">Register</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass.html">Forget Password</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-desktop"></i>UI Elements</a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="button.html">Button</a>
-                                </li>
-                                <li>
-                                    <a href="badge.html">Badges</a>
-                                </li>
-                                <li>
-                                    <a href="tab.html">Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="card.html">Cards</a>
-                                </li>
-                                <li>
-                                    <a href="alert.html">Alerts</a>
-                                </li>
-                                <li>
-                                    <a href="progress-bar.html">Progress Bars</a>
-                                </li>
-                                <li>
-                                    <a href="modal.html">Modals</a>
-                                </li>
-                                <li>
-                                    <a href="switch.html">Switchs</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grids</a>
-                                </li>
-                                <li>
-                                    <a href="fontawesome.html">Fontawesome Icon</a>
-                                </li>
-                                <li>
-                                    <a href="typo.html">Typography</a>
-                                </li>
-                            </ul>
-                        </li>
+                        
+                        
+                        
                     </ul>
                 </div>
             </nav>
@@ -161,10 +80,26 @@ $id=$_GET['id'];
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="adminhome1.php">
+                                <i class="fas fa-tachometer-alt"></i>HOME</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="index.html">Dashboard 1</a>
+                                </li>
+                                <li>
+                                    <a href="index2.html">Dashboard 2</a>
+                                </li>
+                                <li>
+                                    <a href="index3.html">Dashboard 3</a>
+                                </li>
+                                <li>
+                                    <a href="index4.html">Dashboard 4</a>
+                                </li>
+                            </ul>
+                        </li>
                         
-                        <li>
-                            <a href="adminhome1.php">
-                                <i class="fas fa-chart-bar"></i>HOME</a>
+                       
                         
                         
                     </ul>
@@ -302,16 +237,16 @@ $id=$_GET['id'];
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="images/icon/avatar-01.jpg" alt="LOGOUT" />
+                                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#">john doe</a>
+                                            <a class="js-acc-btn" href="logout.php">LOGOUT</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="images/icon/avatar-01.jpg" alt="LOGOUT" />
+                                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
                                                     </a>
                                                 </div>
                                                 <div class="content">
@@ -359,54 +294,92 @@ $id=$_GET['id'];
                             </div>
                         </div>
                         <div class="row m-t-30">
-                            <div class="col-md-12">
+                            <div class="col-xs-12 row">
                                 <!-- DATA TABLE-->
-                                <div class="table-responsive m-b-40">
-                                    <table class="table table-borderless table-data3">
-                                        <thead>
-                                            <tr>
-                                                <th>vehicle</th>
-                                                <th>BPrice</th>
-                                                <th>Description</th>
-                                                <th>Model</th>
-												<th>Color</th>
-												<th>Fuel</th>
-												<th>Registred</th>
-												<th>Year</th>
-												<th>Milage</th>
-												<th>Transmission</th>
-												<th>Update</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-										<?php
-										require "connect.php";
-										  $qury="SELECT *FROM `addvehicle` WHERE vid = '$id'";
+                                
+                                <!-- <div class="table-responsive m-b-40"> -->
+                                <div class="col-xs-12 row">
+                                <div class="col-xs-4 well" style="padding-left:100px"></div>
+                                   	<?php
+                                        require "connect.php";
+                                        $id=$_GET['id'];
+                                        $qrs="SELECT DISTINCT auction_id
+                                        FROM auction
+                                        ORDER BY amount ASC
+                                        LIMIT 3 ";
+                                         $exe=mysqli_query($conn,$qrs);
+                                         $rowe = mysqli_fetch_array($exe);
+                                             $uid=$rowe['auction_id'];
+										  $qury="select * from ureg join auction on ureg.uid=auction.u_id where ureg.uid='$id' and auction.u_id='$uid' ";
 			                            $obj=mysqli_query($conn,$qury);
-										while($row = mysqli_fetch_array($obj)) {              
-												echo  "<tr>
-												<form action='updateVehicle.php' method='post'	>
-													<td><input type='text' name='vid' value=".$row['vid']." hidden></td>
-													<td><input type='text' name='brate' value=".$row['brate']."></td>
-													<td><input type='text' name='desc' value=".$row['description']."></td>
-													<td><input type='text' name='model' value=".$row['model']."></td>
-													<td><input type='text' name='color' value=".$row['color']."></td>
-													<td><input type='text' name='fuel' value=".$row['fuel']."></td>
-													<td><input type='text' name='reg' value=".$row['registred']."></td>
-													<td><input type='text' name='year' value=".$row['year']."></td>
-													<td><input type='text' name='milage' value=".$row['milage']."></td>
-													<td><input type='text' name='trans' value=".$row['transmission']."></td>
-													<td><input type='submit' value='update'name='submit'></td>";
-											
-												echo "</form>";
-												echo "</tr>";
-											}
+										while($row = mysqli_fetch_array($obj)) {  
+                                    
+                                        $row['amount'];
+                                           ?>
+                                           <div class="col-xs-4 well">
+                                          <h3>Hightest<br> <u>Auction User</u></h3><br> <br><br>Name:-<?php echo $row['fname']?><br>Address:- <?php echo $row['address'] ?><br>Email:- <?php echo $row['email']?><br>Phone:- <?php echo $row['phone']?><br>Bid Amount:- <?php echo $row['amount']?><br>
+                                             <br>
+                                             <br><button class='btn btn-primary' onClick=location.href= 'confirmation_mail.php?id="$id"'>Send Mail</button></div>";
+                                           </div>
+                                           
+                                           <?php
+                                        }
+                                         
 										?>
+                                        <?php
+										require "connect.php";
+                                       
+                                       
+										echo  $qury2="select * from ureg join auction on ureg.uid=auction.u_id where ureg.uid='$id' ";
+			                            $obj2=mysqli_query($conn,$qury2);
+										while($row2 = mysqli_fetch_array($obj2)) {  
+                                         // $qury1="select * from auction where vid=".$_GET['id'];
+                                            //$obj1=mysqli_query($conn,$qury1);
+                                           ?>
+                                           <div class="col-xs-4 well">
+                                         <h3> 2nd Hightest<br> <u>Auction User</u></h3><br> <br><br>Name:-<?php echo $row2['fname']?><br>Address:- <?php echo $row2['address'] ?><br>Email:- <?php echo $row2['email']?><br>Phone:- <?php echo $row2['phone']?><br>Bid Amount:- <?php echo $row2['amount']?><br>
+                                             <br>
+                                             <br><button class='btn btn-primary' onClick=location.href= 'confirmation_mail.php?id=".$_GET['id']."'>Send Mail</button></div>";
+                                           </div>
+                                           
+                                           <?php
+                                        }
+                                   
+										?>
+                                        <?php
+										require "connect.php";
 										
+										 $qury3="select * from ureg join auction on ureg.uid=auction.u_id where ureg.uid=".$_GET['id'];
+			                            $obj3=mysqli_query($conn,$qury3);
+										while($row3 = mysqli_fetch_array($obj3)) {  
+                                         // $qury1="select * from auction where vid=".$_GET['id'];
+                                            //$obj1=mysqli_query($conn,$qury1);
+                                           ?>
+                                           <div class="col-xs-4 well">
+                                          <h3>3rd Hightest<br> <u>Auction User</u></h3><br> <br><br>Name:-<?php echo $row3['fname']?><br>Address:- <?php echo $row3['address'] ?><br>Email:- <?php echo $row3['email']?><br>Phone:- <?php echo $row3['phone']?><br>Bid Amount:- <?php echo $row3['amount']?><br>
+                                             <br>
+                                             <br><button class='btn btn-primary' onClick=location.href='confirmation_mail.php?id=".$_GET['id']."'>Send Mail</button></div>";
+                                           </div>
+                                           
+                                           <?php
+                                        }
+                                    
+										?>
+                                        <!-- <div class="col-xs-4 well">
+                                         2nd Hightest<br> <u>Auction User</u><br> <br><br>Name:-<?php echo $row['fname']?><br>Address:- <?php echo $row['address'] ?><br>Email:- <?php echo $row['email']?><br>Phone:- <?php echo $row['phone']?><br>Bid Amount:- <?php echo $row['amount']?><br>
+                                             "<br>
+                                             <br><button class='btn btn-primary' onClick=location.href= 'confirmation_mail.php?id=".$_GET['id']."'>Send Mail</button></div>";
+                                           </div>
+                                           <div class="col-xs-4 well">
+                                          Hightest<br> <u>Auction User</u><br> <br><br>Name:-<?php echo $row['fname']?><br>Address:- <?php echo $row['address'] ?><br>Email:- <?php echo $row['email']?><br>Phone:- <?php echo $row['phone']?><br>Bid Amount:- <?php echo $row['amount']?><br>
+                                             "<br>
+                                             <br><button class='btn btn-primary' onClick=location.href= 'confirmation_mail.php?id=".$_GET['id']."'>Send Mail</button></div>";
+                                           </div> -->
+                                         
+                                </div>
+								<!-- <div class="col-xs-3" style='margin: 0px 100px; padding: 30px 50px; background:#fff'>Name:- ".$row['vehicle']."<br>","<br><img style='width:200px;max-height:200px;' src='".$row['image']."'><br>","Description:- ".$row['description']."<br>","Model:- ".$row['model']."<br>","Color:- ".$row['color']."<br>","Fuel:- ".$row['fuel']."<br>","Registred:- ".$row['registred']."<br>","Year:- ".$row['year']."<br>","Milage:- ".$row['milage']."<br>","Transmission:- ".$row['transmission']."<br>","Add Date:- ".$row['add_date']."<br>","Last Date:- ".$row['l_date']."<br>","Bid Rate:- ".$row['brate'];
+                                             "<br></div></div>  -->
                                             
-                                        </tbody>
-                                    </table>
-								
                                 </div>
                                 <!-- END DATA TABLE-->
                             </div>
@@ -414,7 +387,7 @@ $id=$_GET['id'];
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright">
-                                    <p>Copyright © 2019 AUTOSHOP. All rights reserved. </p>
+                                    <p>Copyright © 2019 AUTOSHOP. </p>
                                 </div>
                             </div>
                         </div>
